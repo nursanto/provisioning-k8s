@@ -1,6 +1,6 @@
-yum -y -q install bash-completion
+yum -y -q install bash-completion  >/dev/null 2>&1
 source /usr/share/bash-completion/bash_completion
-type _init_completion 2>&1 /dev/null
+type _init_completion 
 echo 'source <(kubectl completion bash)' >>~/.bashrc
 kubectl completion bash > /etc/bash_completion.d/kubectl
 echo 'alias k=kubectl' >>~/.bashrc
